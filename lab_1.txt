@@ -8,6 +8,20 @@ Exercise 1.1
                 which calls apply_operator(),
                 which calls achieve_all(), which starts the recursion
     d.
-        i. It models the famous monkey and banana problem. The rules are the bananas are on the ceiling out of reach of the monkey, but waving a stick will knock the bananas down.
-            No, the puzzle is slightly different in that there is a chair instead for the monkey to stand on
-        ii.
+        i. It models the famous monkey and banana problem. The rules are the bananas are on the ceiling out of reach
+            of the monkey even when standing on a chair, but waving a stick while on the chairwill knock the
+            bananas down. No, the puzzle is slightly different in that the bananas are low enough for the monkey to
+            grab, but the monkey must drop a ball first in order to grab the bananas
+
+        ii. Chair Required
+                push chair to the middle of the room
+                climb on chair
+            Door Required
+                walk from door to middle of the room
+            Ball Required
+                drop ball
+            Bananas Required
+                grasp bananas
+                eat bananas
+
+        iii.
