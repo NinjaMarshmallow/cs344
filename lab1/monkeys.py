@@ -1,4 +1,4 @@
-from gps import gps
+from lab1.gps import gps
 
 problem = {
     "start": ["at door", "on floor", "has ball", "hungry", "chair at door"],

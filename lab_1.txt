@@ -1,0 +1,13 @@
+Exercise 1.1
+
+    b.
+        i. GPS is a Function
+        ii. They are all lists
+        iii. Yes, the main gps function calls achieve_all(),
+                which calls achieve(),
+                which calls apply_operator(),
+                which calls achieve_all(), which starts the recursion
+    d.
+        i. It models the famous monkey and banana problem. The rules are the bananas are on the ceiling out of reach of the monkey, but waving a stick will knock the bananas down.
+            No, the puzzle is slightly different in that there is a chair instead for the monkey to stand on
+        ii.
