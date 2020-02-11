@@ -1,6 +1,8 @@
 from gps import gps
 import logging
 
+# Jason Klaassen CS344 Lab 1
+
 problem = {
     "start1": ["space on a", "a on b", "b on c", "c on table", "space on table"],
     "finish1": ["space on c", "c on b", "b on a", "a on table", "space on table"],
@@ -11,7 +13,7 @@ problem = {
     "startb": ["space on b", "space on a", "space on c", "b on table", "a on table", "c on table"],
     "finishb": ["space on a", "a on b", "b on c", "c on table", "space on table"],
 
-    # settings for the Sussman Anamoly, see PAIP, pp. 142. 
+    # settings for the Sussman Anamoly, see PAIP, pp. 142.
     "sussmanStart": ["space on c", "c on a", "a on table", "b on table", "space on table"],
     "sussmanFinish": ["space on a", "a on b", "b on c", "c on table", "space on table"],
 
@@ -297,7 +299,7 @@ problem = {
 #
 def main():
     ops = problem['ops']
-    logging.basicConfig(level=logging.DEBUG)
+    #logging.basicConfig(level=logging.DEBUG)
     start = problem['starta']
     finish = problem['finisha']
 

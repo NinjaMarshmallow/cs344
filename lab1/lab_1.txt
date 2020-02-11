@@ -1,3 +1,5 @@
+Jason Klaassen CS344 Lab 1
+
 Exercise 1.1
 
     b.
@@ -24,4 +26,6 @@ Exercise 1.1
                 grasp bananas
                 eat bananas
 
-        iii.
+        iii. The Acting Humanly definition fits this algorithm the most as it solves a very human logic problem
+                that would take place in the real world and is not abstract like linear algebra
+        iv. Yes, the monkey in the real world displays intelligence by using its environment to achieve its own goals
