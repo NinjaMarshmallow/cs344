@@ -1,0 +1,32 @@
+Exercise 2.1
+
+    a) Both Algorithms, Hill Climbing and Simulated Annealing find the correct solution.
+    b) Hill Climbing ran in 7.58e-05 seconds and Simulated Annealing ran in 0.0039732 seconds so Hill Climbing was faster
+    c) There is very little difference. The are no local maximums so Hill Climbing is the ideal algorithm for this problem.
+        A starting value closer to the solution just makes it run slighly faster
+    d) The delta step variable controls how big the jumps are when moving on the curve.
+        A larger delta step means the algorithm will overshoot more often and a smaller delta step means the algorithm will undershoot more often and take more time.
+    e) The exp_schedule function is the result of a lambda function given arguments for temperature and initial randomness. 
+        This function controls how wild or calm the Simulated Annealing algorithm is.
+
+Exercise 2.2
+
+    a) Compared to the previous problem both algorithms have poorer performance. The time taken is very similar.
+        The Hill climbing algorithm almost never finds the absolute maximum because of 
+        the abundance of local maximums. The Simulated Annealing generally does better because it can jump 
+        over the valleys that stop the hill climbing algorithm.
+    
+    b) Yes, the starting value makes a huge difference on this problem because the starting value
+        for the hill climber defines the maximum possible solution. A better starting for the Annealing also generally gives a better answer.
+    
+    c) By changing the delta step from 1.0 to 5.0, the hill climber can somtimes make a leap across a valley to get to a higher local maximum,
+        but still almost never reaches the global maximum, but the Simulated Annealing algorithm almost always finds the global maximum.
+    
+    d) In the Sine functin abs(x * sin(x)) the minimum is 0 and the global max is 30. 
+        The  Hill climber averages slightly higher than its given initial value, so on average this algorithm finds a solution in the 50 to 60 percentile range.
+        The Simulated Annealer averages finding the maximum of 30 so it is in the 99 to 100% percentile of the maximum
+
+
+Exercise 2.3
+
+    a)
