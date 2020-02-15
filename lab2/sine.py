@@ -30,6 +30,8 @@ class Sine(Problem):
         return x
     
     def value(self, x):
+        if(randrange(5) == 0):
+            return self.initial
         result = math.fabs(x * math.sin(x) )
         if(result > maximum): 
             return maximum

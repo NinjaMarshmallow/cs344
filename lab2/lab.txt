@@ -5,7 +5,8 @@ Exercise 2.1
     c) There is very little difference. The are no local maximums so Hill Climbing is the ideal algorithm for this problem.
         A starting value closer to the solution just makes it run slighly faster
     d) The delta step variable controls how big the jumps are when moving on the curve.
-        A larger delta step means the algorithm will overshoot more often and a smaller delta step means the algorithm will undershoot more often and take more time.
+        A larger delta step means the algorithm will overshoot more often and a smaller delta step means the algorithm 
+        will undershoot more often and take more time.
     e) The exp_schedule function is the result of a lambda function given arguments for temperature and initial randomness. 
         This function controls how wild or calm the Simulated Annealing algorithm is.
 
@@ -17,16 +18,40 @@ Exercise 2.2
         over the valleys that stop the hill climbing algorithm.
     
     b) Yes, the starting value makes a huge difference on this problem because the starting value
-        for the hill climber defines the maximum possible solution. A better starting for the Annealing also generally gives a better answer.
+        for the hill climber defines the maximum possible solution. A better starting for the Annealing also generally 
+        gives a better answer.
     
-    c) By changing the delta step from 1.0 to 5.0, the hill climber can somtimes make a leap across a valley to get to a higher local maximum,
-        but still almost never reaches the global maximum, but the Simulated Annealing algorithm almost always finds the global maximum.
+    c) By changing the delta step from 1.0 to 5.0, the hill climber can somtimes make a leap across a valley to get 
+        to a higher local maximum, but still almost never reaches the global maximum, but the Simulated Annealing 
+        algorithm almost always finds the global maximum.
     
     d) In the Sine functin abs(x * sin(x)) the minimum is 0 and the global max is 30. 
-        The  Hill climber averages slightly higher than its given initial value, so on average this algorithm finds a solution in the 50 to 60 percentile range.
-        The Simulated Annealer averages finding the maximum of 30 so it is in the 99 to 100% percentile of the maximum
+        The  Hill climber averages slightly higher than its given initial value, so on average this algorithm finds 
+        a solution in the 50 to 60 percentile range. The Simulated Annealer averages finding the maximum of 30 so 
+        it is in the 99 to 100% percentile of the maximum
 
 
 Exercise 2.3
 
-    a)
+    a) With random restarts expected once every 5 iterations, the Simulated Annealing appears to have nearly no change, 
+        as it found the maximum everytime. The Hill Climbing also displays no change. This could be because the 
+        delta step is larger from the previous step, which insulates a little more from lost progress.
+
+    b) Simulated Annealing : 30 everytime.
+        Hill Climbing : 15.8 averaged over 10 runs
+
+    c) Simulated Annealing still does much better than Hill Climbing because it is objectively better at 
+        navigating the numerous local maximums spread throughout the x * sin(x) wave.
+
+Exercise 2.4
+
+    a) Since Simulated Annealing already finds the solution 99% of the time, local beam search could definitely 
+        help the Hill Climbing algorithm by picking a set number of initial states to climb from. 
+        This increases the odds that a one of those "climbers" finds the global maximum instead of a 
+        local maximum.
+    
+    b) The number of solutions maintained relies directly on how much memory is available divided by how much memory the average solutions takes up.
+    c) To implement beam search, the Hill Climbing algorithm could be run in parallel, by adding 
+        a member variable of a list of inital states, then applying the algorithm across each element
+        of the list. Of course you would need hardware support for it to be true parallel instead of 
+        just simulated parallel.
