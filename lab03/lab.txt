@@ -1,0 +1,21 @@
+Exercise 3.1
+
+    a) All Algorithms find the solution to the solved puzzle
+        Depth First Search fails on the easy, harder and hardest
+        AC3 succeeds quickly on easy, fails on harder, and hardest
+        Backtracking took about 30 seconds on the easy, but succeeded. Takes too long on harder and hardest
+        Min Conflicts also took about 30 seconds on easy. Takes too long on harder and hardest
+    
+    b) Adding both parameters to Backtracking is best and allows the algorithm to finish all puzzles in under 1 second
+
+Exercise 3.2
+
+    a) 
+        At N = 2000, Min Conflicts takes 3.54 seconds. At N = 500, it takes 0.22 seconds.
+        At N = 200, AC3 takes 4.04 seconds, so it does not scale as well as Min Conflicts
+        At N = 20, for vanilla Backtracking takes 2.5 seconds, and doesn't finish at 30,
+        with the additional parameters it makes it to about 220 before failing to finish quickly
+    
+    b) Using both parameters is the best version of the Backtracking algorithm
+    
+    c)
