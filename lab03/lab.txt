@@ -16,6 +16,25 @@ Exercise 3.2
         At N = 20, for vanilla Backtracking takes 2.5 seconds, and doesn't finish at 30,
         with the additional parameters it makes it to about 220 before failing to finish quickly
     
-    b) Using both parameters is the best version of the Backtracking algorithm
+    b) 
+        Using both parameters is the best version of the Backtracking algorithm
     
-    c)
+    c) Min Conflicts takes an arbitrary amount of steps because it is a local search algorithm 
+        that fills the board completely with random placements. It attempts to find a "good"
+        solution instead of THE solution. The number of steps will depend on how good the initial
+        random placements are at the outset. The maximum number of steps can be given as a parameters
+        though and the default is 10000.
+
+Exercise 3.3
+
+    a) A strong difference between Constraint Satifaction and Traditional Search is that Constraint Satifaction
+        attempts to minimize violations of the given list of constraints, so it goes about solving the problem
+        by removing as many of these violations as possible whereas Traditional Search will execute allowed actions to search for the 
+        goal state and does not have any "close" states where there are minimal conflicts, there are only goal
+        states to be found. Traditional Search is more closely alligned with a straight A at all costs student whereas I am allign more 
+        with Constraint Satifaction where I will solve as many constraints as I need to arrive at a good solution that should take much
+        less time that perfecting it.
+
+    b) A heuristic in a Traditional Search may be as simple as avoiding states that are invalid to prune the tree of possible solutions.
+        The heuristic for Constraint Satifaction will be the number of constraints violated by the next possible states and a "good"
+        next state would be the one with the lowest number of violations.

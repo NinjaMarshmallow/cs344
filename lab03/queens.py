@@ -14,7 +14,7 @@ import logging
 import time
 
 # 1. Set up the problem.
-n = 200
+n = 100
 problem = NQueensCSP(n)
 
 # 2. Solve the problem.
