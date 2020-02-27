@@ -2,12 +2,7 @@ import sys
 import random
 import time
 sys.path.insert(0, '../tools/aima')
-from search import Problem, hill_climbing, simulated_annealing
-
-t = {}
-
-t[1] = 19
-t[4] = 17
+from search import Problem, hill_climbing, simulated_annealing, exp_schedule, genetic_search
 
 
 class Town:
@@ -71,53 +66,53 @@ class TSP(Problem):
         
         
     def actions(self, state):
-        result1 = state[:]
-        result2 = state[:]
-        self.shuffle(result1)
-        self.shuffle(result2)
-        print("Value1:")
-        print(self.value(result1))
-        print("Value2:")
-        print(self.value(result2))
-        return [result1, result2] 
+        switches = []
+        currentPath = state[:]
+        for x in currentPath:
+            if(x == currentPath[0]):
+                continue
+            for y in currentPath:
+                if(x == currentPath[0]):
+                    continue
+                switches.append(self.switch(currentPath, x, y))
+
+        return switches
     
     def result(self, stateIgnored, x):
         return x
     
     def value(self, path):
         totalDistance = 0
-
+        # print(path)
         for town in path:
             nextTown = (path.index(town) + 1)
             if(nextTown >= len(path)):
                 break
-            totalDistance += self.world.calculateDistance(town, nextTown)
+            nextStopDistance = self.world.calculateDistance(town, path[nextTown])
+            #print("Current Town is:", town)
+            #print("Next Town is:", path[nextTown])
+            #print("Distance from", town, "to", path[nextTown], "is", nextStopDistance)
+            totalDistance += nextStopDistance
         
-        totalDistance += self.world.calculateDistance(path[0], path[-1])
+        returnHomeDistance = self.world.calculateDistance(path[0], path[-1])
+        #print("Return Home:", returnHomeDistance)
+        totalDistance += returnHomeDistance
 
         return -totalDistance
-    
-    def shuffle(self, path):
-        print("Printing Shuffle")
-        first = path[0]
-        rest = path[1:]
-        print("Start")
-        print(rest)
-        
-        random.shuffle(rest)
-        print("Shuffled")
-        print(rest)
-        result = []
-        result.append(first)
-        
-        for town in rest:
-            result.append(town)
-        print("Result")
-        print(result)
-        return result
+
+    def switch(self, path, index1, index2):
+        newPath = []
+        for i in path:
+            if(path.index(i) == index1):
+                newPath.append(path[index2])
+            elif(path.index(i) == index2):
+                newPath.append(path[index1])
+            else:
+                newPath.append(i)
+        return newPath
 
 if __name__ == "__main__":
-    towns = 10
+    towns = 20
     world = World(towns)
     path = []
     for i in range(towns):
@@ -127,7 +122,7 @@ if __name__ == "__main__":
     print(path)
     tsp = TSP(world, path)
     print('Initial                      x: ' + str(tsp.initial)
-          + '\t\tvalue: ' + str(tsp.value(path))
+          + '\t\tvalue: ' + str(-tsp.value(path))
           )
 
     startHill = time.time()
@@ -135,6 +130,17 @@ if __name__ == "__main__":
     hill_solution = hill_climbing(tsp)
     endHill = time.time()
     print('Hill-climbing solution       x: ' + str(hill_solution)
-          + '\tvalue: ' + str(tsp.value(hill_solution))
+          + '\tvalue: ' + str(-tsp.value(hill_solution))
           )
-    print("Time taken was", round(endHill - startHill, 7))    
+    print("Time taken was", round(endHill - startHill, 7))
+
+    startAnneal = time.time()
+    annealing_solution = simulated_annealing(
+        tsp,
+        exp_schedule(k=20, lam=0.005, limit=1000)
+    )
+    endAnneal = time.time()
+    print('Simulated annealing solution x: ' + str(annealing_solution)
+          + '\tvalue: ' + str(-tsp.value(annealing_solution))
+          )
+    print("Time taken was", round(endAnneal - startAnneal, 7))    
