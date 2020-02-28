@@ -24,7 +24,7 @@ start = time.time()
 # solution = AC3(problem);
 # solution = backtracking_search(problem, select_unassigned_variable=mrv, inference=forward_checking)
 
-solution = min_conflicts(problem)
+solution = min_conflicts(problem, max_steps=10)
 runtime = time.time() - start
 # 3. Print the results.  
 # Handle AC3 solutions (boolean values) first, they behave differently.

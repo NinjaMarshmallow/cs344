@@ -112,7 +112,7 @@ class TSP(Problem):
         return newPath
 
 if __name__ == "__main__":
-    towns = 20
+    towns = 10
     world = World(towns)
     path = []
     for i in range(towns):
