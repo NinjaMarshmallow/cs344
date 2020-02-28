@@ -1,0 +1,63 @@
+Exercise 4.3
+
+
+    Non-User ( .911 ) --- Negative ( .98 ) --- Positive ( .02 )
+    
+    User ( .089 ) --- Negative ( .01 ) --- Positive ( .99 )
+
+       | Negative --- Positive  |
+       --------------------------
+User   |  .00089   |   .08811   | = .089
+       |-----------|------------|
+! User |   .8928   |   .0182    | = .911
+       |-----------|------------|
+        = .894        = .106
+    a) 
+
+        i. BoldP(User) = < .089, .911 >
+        
+        ii. P(test | user) = P(test is positive && is user) / P(is user) = .089 * .99 / .089
+            = .99
+        
+        iii. P(test is negative | is user) = P(test is negative && is user) / P(is user) = .089 * .01 / .089 
+            = .01
+
+        iv. P(test is positive | not user) = P(test is positive && not user) / P(not user) = .911 * .02 / .911 
+            = .02
+
+        v. BoldP(User | test) = < P(is user | test), P(not user | test) >
+            Bayes Law
+            = < P(test | user) * P(user) / P(test) , P(test | not user) * P(not user) / P(test) >
+
+            = < .99 * .089 / .106 , .02 * .911 / .106 >
+
+            =  < .83 , .17 >
+
+    
+    b)
+
+        Cancer ( .01 ) --- Negative ( .2 ) --- Positive ( .80 )
+    
+        ! Cancer ( .99 ) --- Negative ( .904 ) --- Positive ( .096 )
+
+                | Negative --- Positive  |
+                --------------------------
+        Cancer  |  .002     |   .008     | = .01
+                |-----------|------------|
+        ! Cancer|   .895    |   .095     | = .99
+                |-----------|------------|
+                   = .897       = .103
+
+        BoldP(Cancer | Positive) = < P(True Positive), P(False Positive) >
+        P(True Positive) = P(Cancer | Positive)
+        = P(Cancer && Positive) / P(Positive)
+        = .008 / .103
+        = .077 = 7.7%
+
+        P(False Positive) = P(not Cancer | Positive)
+        
+        Bayes Law
+        = P(Positive | not Cancer) * P(not Cancer) / P(Positive)
+        = .096 * .99 / .103
+        = .922
+
