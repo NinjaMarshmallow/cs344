@@ -1,0 +1,48 @@
+6.2 Done with Emma Schroer
+
+Part 1
+
+1. Identify sloths in a picture.
+
+2. Given a picture the program will be able to identify if there is a sloth.
+
+3.  A success metric is the sloths being correctly identified by the model.
+Success means identifying 80% of the sloths in given set of pictures.
+Failure means the sloths are no better identified then a previously heuristic.
+
+4.
+The output from our model will be if there are any sloths in the picture and how many.
+
+The output would be defined as an integer ranging from 0 to infinity.
+
+5. The output will be immediately made available to the user.
+
+Sorting pictures to design a sloth calendar that optimizes the number of sloths in it.
+
+6. If we didn't use ML we would write a heuristic to identify brown blobs in images. The heuristic will give  a
+better result if the blob is surrounded by green. The blob should have an arc. If there are two symmetrical
+black lines on the blob the picture would be preferred (marks around eyes).
+
+Part 2
+
+1.a.  Binary classification, Unidimensional regression
+
+  b.  Binary classification      - Sloth or no
+      Unidimensional regression  - Number of sloths
+
+2. Multiple images with a number designating how many sloths are in it.
+
+3. Pictures collected from the internet.
+
+4.
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fslothconservationshop.com%2Fproducts%2Fsloths-2020-wall-calendar&psig=AOvVaw350vQbpcM6rOteAzhian5t&ust=1584387644754000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMD8ooienegCFQAAAAAdAAAAABAE
+2 sloths
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FThree-Sloth-Poster-Animals-Posters%2Fdp%2FB00BV0L5CA&psig=AOvVaw350vQbpcM6rOteAzhian5t&ust=1584387644754000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMD8ooienegCFQAAAAAdAAAAABAK
+1 sloth
+
+https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.slothville.com%2Fwhat-is-a-sloth%2F&psig=AOvVaw1SRdcEKu6aiQVb47L3L6Vy&ust=1584387717148000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjx6qenegCFQAAAAAdAAAAABAG
+5 sloths
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fcar%2F&psig=AOvVaw1HYvnkoIaOkq8jw7QRHzu7&ust=1584387778961000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiJiMienegCFQAAAAAdAAAAABAD
+0 sloths

@@ -1,0 +1,34 @@
+Jason Klaassen
+CS 344
+3 / 14 / 20
+
+Exercise 6.1
+
+Calculating Information Gain for the question of Hungry or not.
+
+Entropy(Hungry) = - ( 7/12 * lg(7/12) + 5/12 * lg(5/12) )
+                = 0.9795 (approx.)
+
+Remainder(Hungry) = 7/12 * Entropy( Yes )
+                    + 5/12 * Entropy ( No )
+
+                  = 7/12 * -( 5/7 * lg(5/7) + 2/7 * lg(2/7) )
+                    + 5/12 * -( 1/5 * lg(1/5) + 4/5 * lg(4/5) )
+
+                  = 7/12 * .863 + 5/12 * .722
+
+                  = 0.8011
+
+Gain(Hungry) = Entropy(Hungry) - Remainder(Hungry)
+             = .9795 - .8011
+             = .1784
+
+There is little information gained in this question.
+Since the Hungry question splits the decision tree into 2 branches (Yes and No) at 7/12 and 5/12.
+The fact that one is hungry or not basically cuts the decision space in half, which may be a fast
+way to decrease entropy in the long run, but not right after this question.
+
+For example, the "Patrons" question gives a Gain of 0.46 which is much higher than .1784 because
+two of its outcomes have no entropy at all since you never wait somewhere with no patrons and always
+wait if there are some patrons. This question significantly trims down the decision tree while completely
+solving some states. The "Hungry" question does not completely solve any states.
