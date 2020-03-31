@@ -1,0 +1,17 @@
+Exercise 7.1
+a)
+        Pandas Exercise 1
+
+        cities['Large Saint'] = cities['City name'].apply(lambda city: 'san' in city.lower()) & cities['Area square miles'].apply(lambda city: city > 50)
+        print(cities)
+
+        Pandas Exercise 2
+
+        Allowing index values not in the original Data Frame gives the user the ability 
+        to use another index method to show where there are missing values in the Data Frame.
+        Also you don't have to worry about matching the different index methods perfectly.
+
+b) Pandas is encapsulates many of the Numpy functionality into a couple functions, so that it can be learned quickly and used quickly. 
+    It also pretty prints by default
+
+c) Reindex would allow sorting by column and shuffling would allow for randomizing the data.

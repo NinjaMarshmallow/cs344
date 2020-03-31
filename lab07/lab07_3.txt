@@ -1,0 +1,37 @@
+Exercise 7.3
+
+a) Task 1:
+
+    california_housing_dataframe["rooms_per_person"] = california_housing_dataframe["total_rooms"] / california_housing_dataframe["population"]
+
+    calibration_data = train_model(
+        learning_rate=0.05,
+        steps=1000,
+        batch_size=100,
+        input_feature="rooms_per_person"
+    )
+
+   Task 2:
+
+    plt.figure(figsize=(15, 6))
+    plt.subplot(1, 2, 1)
+    plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+
+   Task 3:
+
+    california_housing_dataframe["rooms_per_person"] = (
+    california_housing_dataframe["total_rooms"] / california_housing_dataframe["population"])
+
+    california_housing_dataframe["clipped_rooms_per_person"] = california_housing_dataframe["rooms_per_person"].apply(lambda x: min(x, 4))
+
+    calibration_data = train_model(
+        learning_rate=0.05,
+        steps=500,
+        batch_size=5,
+        input_feature="clipped_rooms_per_person")
+
+b) By combining two features mathematically, the model can effectively train on 
+    multiple features to be more precise.
+
+c) Generally outliers are removed to provide a better fit to the vast majority of the data.
+    Another option is to weight the outliers less than non-outliers.

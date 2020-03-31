@@ -1,0 +1,30 @@
+Exercise 7.2
+
+a)  Numerical data is represented with integers and floats and can be depicted as a graph as this type of data is continuous.
+
+b) Task 1:
+
+    train_model(
+        learning_rate=0.0005,
+        steps=100,
+        batch_size=5
+    )
+
+   Task 2:
+
+    train_model(
+        learning_rate=0.0005,
+        steps=100,
+        batch_size=100,
+        input_feature="population"
+    )
+
+c) Hyper Parameters are the parameters given to the training function that dictate how the machine learns, 
+how quickly and how precisely it zero's in on better solutions
+
+There are not hard standards, but there are rules of thumb such as:
+        -Increasing the learning_rate if the RMSE is not converging
+        -Decreasing the learning_rate if the RMSE jumps around alot
+        -Increasing batch_size until you can see a worse result
+        -Low learning rate plus a high step size generally gives good results
+
