@@ -1,0 +1,25 @@
+Exercise 8.3
+
+a) FTRL changes the learning rate on the fly. It raises or lowers it from the base level provided by the parameter
+        according to the coefficients in use while training.
+
+b) Binning is used for the same reason as the synthetic feature created last Exercise, distance_from_LA. 
+The latitude feature does not correlate well with median_income, but a certain bin of latitude does.
+
+c)
+    Task 1:
+
+        def createBucket(feature, featureString, buckets):
+            tf.feature_column.bucketized_column(
+            feature, boundaries=get_quantile_based_boundaries(
+            training_examples[featureString], buckets))
+
+        bucketized_latitude = createBucket(latitude, "latitude", 10)
+        bucketized_housing_median_age = createBucket(housing_median_age, "housing_median_age", 10)
+        bucketized_median_income = createBucket(median_income, "median_income", 10)
+        bucketized_rooms_per_person = createBucket(rooms_per_person, "rooms_per_person", 10)
+
+    Task 2:
+
+        long_x_lat = tf.feature_column.crossed_column(
+            set([bucketized_longitude, bucketized_latitude]), hash_bucket_size=1000) 

@@ -1,0 +1,8 @@
+Exercise 8.4
+
+a) K-folds are a good method of making a model more precise even on datasets 
+    that are small or with validation sets that are small.
+b) If a dataset varies wildly, it's more likely that any given validation set or 
+    testing sets do not match the training set well, even if the model is relatively good.
+c) Yes, it will avoid 'severe overfitting'
+d) No, making it deeper does cause overfitting and making the network wider causes more noise and unreliability

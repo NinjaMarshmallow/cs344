@@ -1,0 +1,46 @@
+Exercise 8.2
+
+a) 
+
+    The Pearson Correlation Coeffient describes how closely the data fits a line.
+    Values close to -1 or 1 show heavy Correlation as the best-fit line is very close to the data points
+    Values close to 0 indicate no Correlation or random noise. 
+
+    Population and Households have a PCC of 0.9, which makes sense as generally the 
+        higher the population the more households exist to hold those extra people.
+    Population and Population have a PCC of 1.0 because the data points match exactly since they are the same.
+
+b)
+
+    Task 1:
+
+        minimal_features = [
+                        "median_income",
+                        "rooms_per_person"
+        ]
+
+        Final RMSE: 
+            period 09 : 84.96
+        
+        Yes, I crushed the solution provided ( 113.27 ) because rooms_per_person is a better predictor than latitude
+
+
+    Task 2:
+
+        california_housing_dataframe["distance_from_sf"] = abs(california_housing_dataframe["latitude"] - 38)
+        california_housing_dataframe["distance_from_la"] = abs(california_housing_dataframe["latitude"] - 34)
+
+        minimal_features = [
+            "median_income",
+            "distance_from_sf",
+            "distance_from_la"
+        ]
+
+        train_model(
+            learning_rate=0.05,
+            steps=500,
+            batch_size=5,
+            training_examples=minimal_training_examples,
+            training_targets=training_targets,
+            validation_examples=minimal_validation_examples,
+            validation_targets=validation_targets)
