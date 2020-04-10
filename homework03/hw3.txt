@@ -1,0 +1,40 @@
+Homework 3 - CS344
+
+
+Exercise 1
+
+Compute the Information Gain of the Price attribute from the restaurant datatable
+
+Gain(Price) = Entropy(Wait) - Remainder(Price)
+
+            = 1.0 - (3/12 * Entropy($$$) + 2/12 * Entropy($$) + 7/12 * Entropy($)
+            
+            = 1.0 - (3/12 * -(lg(1/3) * 1/3 + lg(2/3) * 2/3) + 2/12 * 0 + 7/12 * -(lg(3/7) * 3/7 + lg(4/7) * 4/7) )
+            
+            = 1.0 - (3/12 * .9183 + 0 + 7/12 * .9851)
+            
+            = 1.0 - (0.804)
+            
+            = .196
+
+
+Exercise 2
+
+Simplify the XOR Mutlilayer Network by relaxing conventions of sequential densely connected networks. 
+
+By removing a node, the network is no longer sequential as there are edges that go from the input 
+nodes to both the hidden middle layer and the output node. The network is still densely connected 
+though and removing edges to make the network no densely connected results in computation failure 
+since the network becomes unbalanced or because a single layer network.
+
+In the diagram below:
+
+The center hidden node has an activation function requiring a threshold sum of 2 to send along 
+to the output node. All edges have weights of 1 except for the edge from the center hidden node 
+to the output node, which is -2. The Output node will output 1 if the threshold sum is more than 0.
+
+Input 1 O -------
+         \       \
+          O ---- O ---- Output
+         /       /
+Input 2 O -------
