@@ -1,0 +1,4 @@
+Exercise 9.3
+
+a) 2 Hidden Layers is optimal because 1 hidden layer is too simple to achieve good results while 3 hidden layers overfits.
+The tanh works better than relu because it keeps the weights small between -1 and 1

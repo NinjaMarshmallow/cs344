@@ -1,0 +1,7 @@
+Execise 9.2
+
+a) Sparcity makes the algorithm look for simpler characteristics
+
+b) L1 Regularization achieves sparcity by setting less necessary parameters to zero creating sparse solutions
+
+c) Best LogLoss was .28 after 4 periods at Regularization Strength of 0.7

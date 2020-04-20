@@ -1,0 +1,48 @@
+Exercise 9.1
+
+
+a) Linear Regression is effective when the difference in classification is high. 
+    If it is obvious, then the probablities will not hover around .5 and the linear 
+    regression will work well. If there is significant fuzziness though, linear regression
+    does not do as well.
+
+b)
+
+    Task 1 Solution:
+
+        validation_predictions = linear_regressor.predict(input_fn=predict_validation_input_fn)
+        
+        predictions = []
+        for item in validation_predictions:
+            predictions.append(item['predictions'][0])
+        
+        validation_predictions = np.array(predictions)
+
+    LogLoss penalizes errors that occur at higher confidences more severely than L2 making for better predictions.
+
+c)
+
+    Task 2 Solution:
+
+        linear_classifier = tf.estimator.LinearClassifier(
+        feature_columns=construct_feature_columns(training_examples),
+        optimizer=my_optimizer
+    )
+
+    Linear Regression is good at solving error when only large differences in error matter 
+    while Logistic Regression better fits solving errors that are very close together, but
+    that small difference is still a large issue.
+
+d)
+
+    linear_classifier = train_linear_classifier_model(
+        learning_rate=0.000005,
+        steps=50000,
+        batch_size=200,
+        training_examples=training_examples,
+        training_targets=training_targets,
+        validation_examples=validation_examples,
+        validation_targets=validation_targets)
+
+    AUC on the validation set: 0.81
+    Accuracy on the validation set: 0.78
