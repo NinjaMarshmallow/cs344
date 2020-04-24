@@ -1,0 +1,11 @@
+Exercise 10.1
+
+a) Keras would be my preferred tool because it is simpler to use
+     since it creates wrappers around boilerplate or difficult to 
+     understand parts of tensorflow
+
+b)
+    I just kept getting this error on Task 1 and Task 2:
+        WARNING: Entity <bound method _DNNModel.call of <tensorflow_estimator.python.estimator.canned.dnn._DNNModel object at 0x7fc737c927b8>> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: module 'gast' has no attribute 'Num'
+    I reloaded the page and re-ran all the segments. It just doesn't keeps giving this error when running the RMSE
+

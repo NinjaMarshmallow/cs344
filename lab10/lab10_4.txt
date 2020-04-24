@@ -1,0 +1,12 @@
+Exercise 10.4
+
+a) The size of the cats and dogs datasets are both 25,000, but for this exercise only 2,000 of each are used.
+    The dataset is an array of various images of cats and an array of various images of dogs.
+
+b) It overfits a lot as shown by it being close to 100% accurate on the training set, 
+    but only 70% on the validation set. I believe the example in class had a better score
+    on the validation set.
+
+c)It seems that the key features it looks for are pointy ears, whiskers, smaller squinty eyes 
+    and a specific nose shape. All those definitely fit most types of cats. But it seems to overfit 
+    to the picture where the cat is straight on in portrait view.

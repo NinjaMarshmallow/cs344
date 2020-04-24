@@ -1,0 +1,16 @@
+Exercise 10.3
+
+a) The confusion matrix for this example shows a dark diagonal line showing 
+    that in general, it predicts very well. However, there are a few squares 
+    off of the diagonal of correct predictions that are gray signally a 
+    prediction error. This shows that the model has a bit of trouble telling 4's
+    and 9's apart as well as  the difference between 5's and 3's. 
+
+
+b) The Tensorflow network architecture is a Neural Network instead of a 
+    linear regression network, so the difference in structure is that a 
+    neural network provides multiple hidden layers to be able to model 
+    non-linear relationships between variables.
+
+
+c) 10 steps seems like random noise. 100 steps is slightly less random and by 1000 I can start to see partial numbers, but it's not very clear.

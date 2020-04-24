@@ -1,0 +1,7 @@
+Exercise 10.2
+
+a) AdaGrad provides a better learning rate by adjusting it on the fly 
+depending on the current coefficient, which generally helps the algorithm
+train faster
+
+b)
