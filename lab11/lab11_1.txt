@@ -1,0 +1,32 @@
+Exercise 11.1
+
+a) If the pattern to be learned by network is simple (linear), 
+    then a linear classifier will be the better tool for the job 
+    since its less complex than a deep neural network and will 
+    accomplish the task just as well.
+
+
+b) Yes, in this example the DNN did much better than the linear classifier. 
+    The DNN has 88% accuracy and 96% accuracy on the training and testing sets 
+    respectively while the linear classifier only reaches 78% on both.
+
+c) No, the sparcity is a key component to the better sucess of the deep neural network. 
+    Even though there are less dimensions, this model does much worse. It performs about 
+    the same as a linear classifier because the dimenions are collapsed.
+
+d) The words great and excellent have very similar embeddings because they have very 
+    similar sentiments. According to the conclusion of the exercise, this is shown by 
+    a very large dot product calculated between these two words when graphed in the 
+    feature space.
+
+e) hyperparameters were:
+
+    learning rate: 0.05
+    training steps: 5000
+    Using the Adam optimizer
+    0.96 accuracy on the training set
+    0.89 accuracy on the testing set
+
+    This seems pretty good, it definitely overfits a little, 
+    but the testing accuracy is the highest I found with the 
+    amount of tweaking I did.

@@ -1,0 +1,19 @@
+Exercise 11.2
+
+a) Some biases in the data are shown by the various features. 
+    For example, 2/3 of the dataset is male instead of the normal 
+    50/50 split in the general population. Secondly, a vast majority 
+    of the dataset are citizens of the United States and a vast majority 
+    are white. So this is not representative of the general population.
+
+b) The relationship feature has potential bias. There are 10x as many husbands 
+    as wives in this dataset, so that either raises so interesting questions 
+    about where the data was collected or women, particularly married women, 
+    are severely underepresented in this dataset.
+
+c) Done
+
+d) There is a large disparity between white and black races looking at 
+    the 50k a year feature. Whites are vastly overrepresented in the above 
+    50k a year feature. Although it is difficult to really make any statistically 
+    significant statement when the data is so skewed like this.
