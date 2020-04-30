@@ -1,0 +1,13 @@
+My project proposal is a neural network to correctly identify CAPTCHA images. 
+I don't like doing them. I think it would be fun for the final project to have an algorithm 
+pass a Turing Test. Since there are many different classifications that the CAPTCHA may 
+prompt for, I think the first goal would be to get one classification working properly,
+but the ultimate reach goal is to create multiple neural networks where the correct network
+is chosen based on what object the CAPTCHA wants to be searched for among the images. I believe
+we learned that the convolutional neural network worked well for image recognition, so I think
+I will use that type of ML.
+
+The technologies to be used are python specifically the keras library since that's what we've
+been using for most of the current labs. I believe I would need some sort of javascript driver 
+that finds the CAPTCHA on the page and then calls an ajax request to run the python script and 
+get the result of the network.
