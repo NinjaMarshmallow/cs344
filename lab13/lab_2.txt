@@ -1,0 +1,27 @@
+Exercise 13.2
+
+First Order Logic
+
+a)
+
+Facts:
+
+1. There exists A, B such that on(A, B)
+2. There exists B, C such that on(B, C)
+3. There exists Table, C such that supports(Table, C)
+4. For any X,Y supports(Y, X) => on(X, Y)
+5. For any X,Y on(X, Y) => above(X, Y)
+6. For any X,Y,Z (above(X, Y) && above(Y, Z)) => above(X, Z)
+
+Proof. I will show that A is above the table.
+
+Given the above facts.
+
+Starting with Facts #3 and #4, supports(Table, C) implies that on(C, Table)
+Then above(C, Table) (Fact #5)
+Also above(B, C) (Fact #2 and #5)
+Then above(B, Table) (Fact #6)
+Also above(A, B) (Fact #1 and #5)
+
+Then Finally above(A, Table) follows directly from the last two statments using Fact #6
+  
