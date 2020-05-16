@@ -1,0 +1,29 @@
+Homework 5
+Jason Klaassen for CS344 at Calvin College
+5/16/20
+
+Exercise 7.2 from AI Text
+
+(Adapted from Barwise and Etchemendy (1993).) Given the following, can you prove
+that the unicorn is mythical? How about magical? Horned?
+If the unicorn is mythical, then it is immortal, but if it is not mythical, then it is a
+mortal mammal. If the unicorn is either immortal or a mammal, then it is horned.
+The unicorn is magical if it is horned.
+
+Seperated out:
+
+1. If the unicorn is mythical, then it is immortal.
+2. If it is not mythical, then it is a mortal mammal. 
+3. If the unicorn is either immortal or a mammal, then it is horned.
+4. The unicorn is magical if it is horned.
+
+Since ¬mythical | | mythical is a tautology, then the unicorn is either immortal or a mortal mammal by Facts #1 and #2.
+Using Fact #3, it directly follows that the unicorn is horned.
+By Fact #4, the unicorn is magical because it is horned.
+
+So I have shown that the unicorn is both horned and magical. 
+However, there are no facts that provide information on whether the unicorn is mystical or not.
+There are no facts where being magical, horned, or a mammal implies mythical or not mythical.
+
+LPN Exercise 2.4
+
