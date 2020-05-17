@@ -30,6 +30,14 @@ V3, H3 must share 6,6
 
 */
 getLetter(X,Y) :- nth0(Y, X, L).
-
 matchLetter(X, Y, XP, YP) :- getLetter(X, XP) = getLetter(Y, YP).
-crossword(V1, V2, V3, H1, H2, H3) :- matchLetter()
+
+crossword(V1, V2, V3, H1, H2, H3) :- matchLetter(V1, H1, 2, 2),
+                                     matchLetter(V1, H2, 4, 2),
+                                     matchLetter(V1, H3, 6, 2),
+                                     matchLetter(V2, H1, 2, 4),
+                                     matchLetter(V2, H2, 4, 4),
+                                     matchLetter(V2, H3, 6, 4),
+                                     matchLetter(V3, H1, 2, 6),
+                                     matchLetter(V3, H2, 4, 6),
+                                     matchLetter(V3, H3, 6, 6).
