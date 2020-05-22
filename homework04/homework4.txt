@@ -26,3 +26,5 @@ where each player moves a character than has certain abilities. After playings m
 this DNN started making plays and combinations of attacks that were very good that professional 
 players hadn't ever actually seen before. The way that DNN becomes a bust though would be its 
 limitation that it can only train for one specific task at once.
+
+2.
